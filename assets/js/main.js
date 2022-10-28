@@ -72,6 +72,7 @@ createApp({
     methods: {
 
         taskDone(i) {
+            //Rimuovo il todo al click dell'icona
             console.log('Ho cliccato sulla task con indice:', i);
             this.tasks.splice(i, 1);
         },
@@ -79,7 +80,10 @@ createApp({
         addTask() {
             console.log('Ho cliccato sul pulsante');
             console.log(this.newTask)
+            //Aggiungo l'input nell'oggetto
             this.tasks.unshift(this.newTask);
+            //Svuoto l'oggetto
+            this.newTask= '';
         }
     }
 }).mount('#app')
