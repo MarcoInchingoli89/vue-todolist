@@ -1,9 +1,7 @@
 /* Descrizione:
 Rifare l'esercizio della to do list. Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 text, una stringa che indica il testo del todo
-done, un booleano (true/false) che indica se il todo è stato fatto oppure no
-MILESTONE 3
-Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti. */
+done, un booleano (true/false) che indica se il todo è stato fatto oppure no*/
 
 //Milestone 1
 //Creare un array di oggetti per la to do list con le proprietà text e done
@@ -24,7 +22,11 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 //Con v-model vai a reperire l'input dell'utente
 //Crea una funzione al click prendi l'input e pushalo nell'array
 
+/* Bonus:
+1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
+2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) */
 
+//Inserisco con keyup la funzione addTask sul tasto enter della tastiera per aggiungere l'input anche alla pressione del tasto
 
 
 
