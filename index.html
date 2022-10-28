@@ -12,7 +12,16 @@
 <body>
     
     <div id="app">
-        {{message}}
+        <div class="container">
+            <div class="add_task">
+
+            </div>
+            <div class="task_list">
+                <ul>
+                    <li v-for="(task, i) in tasks">{{task.text}}</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 
