@@ -23,10 +23,14 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no*/
 //Crea una funzione al click prendi l'input e pushalo nell'array
 
 /* Bonus:
-1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) */
 
+//Bonus 1
 //Inserisco con keyup la funzione addTask sul tasto enter della tastiera per aggiungere l'input anche alla pressione del tasto
+
+//Bonus 2
+//Aggiungo un evento a click sull'item
+//Creo una funzione al click che controlla con un ciclo if se done è vero o falso e lo imposta di conseguenza
 
 
 
@@ -73,7 +77,7 @@ createApp({
 
     methods: {
 
-        taskDone(i) {
+        taskRemove(i) {
             //Rimuovo il todo al click dell'icona
             console.log('Ho cliccato sulla task con indice:', i);
             this.tasks.splice(i, 1);
@@ -85,7 +89,18 @@ createApp({
             //Aggiungo l'input nell'oggetto
             this.tasks.unshift(this.newTask);
             //Svuoto l'oggetto
-            this.newTask= '';
+            this.newTask = '';
+        },
+
+        taskDone(i, task) {
+            console.log('Ho cliccato sul testo:', i);
+            console.log(task.done);
+            if (task.done === true) {
+                task.done = false;
+            } else {
+                task.done = true;
+            }
+
         }
     }
 }).mount('#app')
