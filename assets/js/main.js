@@ -12,6 +12,8 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 //Creare un array di oggetti per la to do list con le proprietà text e done
 //Creare una lista non ordinata con un list item in html
 //Attraverso un v-for stampare in pagina i todo
+//Inserisci su li tramite bootstrap la text decoration
+//Usa un ternary operator su li. Se done è uguale a true, visualizza la text decoration altrimenti no
 
 
 
@@ -30,7 +32,7 @@ const { createApp } = Vue
 
             {
                 text: "Porta fuori il cane",
-                done: false
+                done: true
             },
 
             {
@@ -40,7 +42,7 @@ const { createApp } = Vue
 
             {
                 text: "Studia Javascript",
-                done: false
+                done: true
             },
 
             {

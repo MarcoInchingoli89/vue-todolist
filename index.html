@@ -18,7 +18,8 @@
             </div>
             <div class="task_list">
                 <ul>
-                    <li v-for="(task, i) in tasks">{{task.text}}</li>
+                    <li :class="task.done === true ? 'done_true' : '' " 
+                    v-for="(task, i) in tasks">{{task.text}}</li>
                 </ul>
             </div>
         </div>
