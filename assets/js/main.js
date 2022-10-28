@@ -22,9 +22,6 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no*/
 //Con v-model vai a reperire l'input dell'utente
 //Crea una funzione al click prendi l'input e pushalo nell'array
 
-/* Bonus:
-2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) */
-
 //Bonus 1
 //Inserisco con keyup la funzione addTask sul tasto enter della tastiera per aggiungere l'input anche alla pressione del tasto
 
