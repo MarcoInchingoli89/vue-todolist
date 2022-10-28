@@ -19,7 +19,7 @@
             <div class="task_list">
                 <ul>
                     <li :class="task.done === true ? 'done_true' : '' " 
-                    v-for="(task, i) in tasks">{{task.text}}</li>
+                    v-for="(task, i) in tasks">{{task.text}} <i @click="taskDone(i)" class="fa-solid fa-circle-xmark"></i> </li>
                 </ul>
             </div>
         </div>
