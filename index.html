@@ -14,9 +14,11 @@
     <div id="app">
         <div class="container">
             <div class="add_task">
-
+                <h3 class="my-4 text-primary">ToDo</h3>
+                <input v-model="newTask" type="text">
+                <button class="mx-2" @click="addTask">Aggiungi</button>
             </div>
-            <div class="task_list">
+            <div class="task_list py-3">
                 <ul>
                     <li :class="task.done === true ? 'done_true' : '' " 
                     v-for="(task, i) in tasks">{{task.text}} <i @click="taskDone(i)" class="fa-solid fa-circle-xmark"></i> </li>

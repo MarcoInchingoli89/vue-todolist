@@ -2,10 +2,6 @@
 Rifare l'esercizio della to do list. Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 text, una stringa che indica il testo del todo
 done, un booleano (true/false) che indica se il todo è stato fatto oppure no
-MILESTONE 1
-Stampare all'interno di una lista, un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
-MILESTONE 2
-Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 MILESTONE 3
 Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti. */
 
@@ -21,47 +17,69 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 //Aggiungi all'icona un evento a click
 //Fai una funzione per rimuovere con splice un oggetto dell'array al click
 
+//Milestone 3
+//Inserisci un input nel markup
+//Inserisci un button nel markup con scritto "aggiungi"
+//Inserisci un evento a click sul pulsante
+//Con v-model vai a reperire l'input dell'utente
+//Crea una funzione al click prendi l'input e pushalo nell'array
+
+
+
 
 
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
-      return {
-        tasks: [
-            
-            {
-                text: "Fare la spesa",
+        return {
+
+            newTask: {
+                text: "",
                 done: false
             },
 
-            {
-                text: "Porta fuori il cane",
-                done: true
-            },
+            tasks: [
 
-            {
-                text: "Fai l'esercitazione pomeridiana",
-                done: false
-            },
+                {
+                    text: "Fare la spesa",
+                    done: false
+                },
 
-            {
-                text: "Studia Javascript",
-                done: true
-            },
+                {
+                    text: "Porta fuori il cane",
+                    done: true
+                },
 
-            {
-                text: "Sessione D&D serale",
-                done: false
-            },
-        ]
-      }
+                {
+                    text: "Fai l'esercitazione pomeridiana",
+                    done: false
+                },
+
+                {
+                    text: "Studia Javascript",
+                    done: true
+                },
+
+                {
+                    text: "Sessione D&D serale",
+                    done: false
+                },
+            ]
+        }
     },
 
     methods: {
+
         taskDone(i) {
             console.log('Ho cliccato sulla task con indice:', i);
             this.tasks.splice(i, 1);
+        },
+
+        addTask() {
+            console.log('Ho cliccato sul pulsante');
+            console.log(this.newTask)
+            this.tasks.unshift(this.newTask);
         }
     }
-  }).mount('#app')
+}).mount('#app')
