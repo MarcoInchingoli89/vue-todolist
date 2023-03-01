@@ -86,7 +86,7 @@ createApp({
             //Aggiungo l'input nell'oggetto
             this.tasks.unshift(this.newTask);
             //Svuoto l'oggetto
-            this.newTask = '';
+            this.newTask = { text: '', done: false };
         },
 
         taskDone(i, task) {

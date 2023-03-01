@@ -19,18 +19,18 @@
     <div id="app">
         <div class="container">
             <div class="add_task">
-                <h3 class="my-4 text-primary">My To-Do List</h3>
+                <h3 class="my-4 text-primary display-4 font-weight-bold text-shadow">My To-Do List</h3>
                 <div class="input-group">
-                    <input class="form-control" v-model="newTask.text" @keyup.enter="addTask" type="text"
+                    <input class="form-control border-dark" v-model="newTask.text" @keyup.enter="addTask" type="text"
                         placeholder="Add new task">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" @click="addTask">Add Task</button>
+                        <button class="btn btn-outline-dark" @click="addTask">Add Task</button>
                     </div>
                 </div>
             </div>
             <div class="task_list py-3">
                 <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center"
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-dark"
                         @click="taskDone(i, task)" :class="task.done === true ? 'done_true' : '' "
                         v-for="(task, i) in tasks">
                         {{task.text}}
